@@ -29,7 +29,7 @@ if __name__ == '__main__':
 	linear_constraints = sp.LinearConstraint(A, lb, ub)
 
 	# Define initial guess
-	x0 = np.array([0.0, 0.0, 0.0, 0.0, 0.0])
+	x0 = np.array([-1.0, 0.0, 1.0, 0.0, 0.0])
 
 	# Solve minimization problem
 	min_sol = sp.minimize(Fx, x0, method='trust-constr', bounds=bound_constraints, constraints=linear_constraints, options={'verbose': 1})
